@@ -141,3 +141,48 @@ while m_loop:#Main loop
             print("Invalid answer")
     print()
 
+#closing the log book file for save the data
+log_book.close()
+
+# part 1
+if con_user!="1":
+    print("---------------------------------------------------------------")
+    print("Horizontal Histogram")
+    print("Progress  ",f'{progress_count:2}'," : ",progress_count * "*")
+    print("Trailer   ",f'{trailer_count:2}'," : ",trailer_count * "*")
+    print("Retriever ",f'{retriever_count:2}'," : ",retriever_count * "*")
+    print("Excluded  ",f'{excluded_count:2}'," : ",excluded_count * "*")
+    print()
+    print(trailer_count+progress_count+retriever_count+excluded_count,"outcomes in total." )
+    print("---------------------------------------------------------------")
+
+
+#part 2
+if con_user=="3":
+    print()
+    print("---------------------------------------------------------------")
+    print("Vertical Histogram")
+    print("Progress"+f'{progress_count:2}',"|","Trailing"+f'{trailer_count:2}',"|","Retriever"+f'{retriever_count:2}',"|","Excluded"+f'{excluded_count:2}')
+
+    #printing Vertical Histogram
+    for i in range(max(progress_count,trailer_count,retriever_count,excluded_count)):#reference(https://www.w3schools.com/python/ref_func_max.asp#:~:text=Example,max(5%2C%2010))
+        if i<progress_count:
+            print("*".center(8),"   ",end=" ")#reference(https://www.w3schools.com/python/ref_string_center.asp#:~:text=txt%20%3D%20%22banana%22-,x%20%3D%20txt.center(20),-print(x))
+        else:
+            print(" ".center(8),"   ",end=" ")
+        if i<trailer_count:
+            print("*".center(8),"   ",end=" ")
+        else:
+            print(" ".center(8),"   ",end=" ")
+        if i<retriever_count:
+            print("*".center(9),"   ",end=" ")
+        else:
+            print(" ".center(8),"   ",end=" ")
+        if i<excluded_count:
+            print("*".center(9),"   ",end=" ")
+        else:
+            print(" ".center(9),"   ",end=" ")
+        print()
+    print("---------------------------------------------------------------")
+
+
