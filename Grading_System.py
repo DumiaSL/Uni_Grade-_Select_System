@@ -183,3 +183,25 @@ if con_user=="3":
     print("---------------------------------------------------------------")
 
 
+# part 3
+if con_user=="4":
+    #calling print function
+    print("Summery")
+    print_list(progress_list,"Progress - ")
+    print_list(progress_trailer_list,"Progress (module trailer) - ")
+    print_list(module_retriever_list,"Module retriever - ")
+    print_list(excluded_list,"Exclude – ")
+
+#part 4
+if con_user=="5":
+    print()
+    #to show past records
+    print("past records")
+    print()
+    log_book=open("Log_book_all.txt","r")
+    print(log_book.read())
+    
+    log_book.close()
+    
+print()
+print("Thank you")
